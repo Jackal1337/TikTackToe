@@ -25,7 +25,7 @@ int main()
 		play->printhint();
 		i = i + play->activePos(pos);
 		play->print();
-		if (play->win())
+		if (play->win() == 1)
 		{
 			std::cout << "Winner is ";
 			std::cout << play->WinnerName() << std::endl;;
@@ -33,7 +33,7 @@ int main()
 			system("pause");
 			return 1;
 		}
-		else if (i == 9)
+		else if (i >= 9)
 		{
 			pos = 0;
 			cout << "Game ended" << endl;
