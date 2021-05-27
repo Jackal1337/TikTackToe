@@ -10,6 +10,10 @@ public:
 		Empty* test = new Empty();
 		box* bbb = new Empty();
 		bbb->Draw();
+
+
+
+
 		empty = new Empty();
 		cross = new Cross(NameCross);
 		circle = new Circle(NameCircle);
