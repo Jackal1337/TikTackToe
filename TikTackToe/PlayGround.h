@@ -5,8 +5,11 @@
 class PlayGround
 {
 public:
-	PlayGround(string & NameCross, string & NameCircle)
+	PlayGround(string& NameCross, string& NameCircle)
 	{
+		Empty* test = new Empty();
+		box* bbb = new Empty();
+		bbb->Draw();
 		empty = new Empty();
 		cross = new Cross(NameCross);
 		circle = new Circle(NameCircle);
@@ -24,13 +27,12 @@ public:
 	{
 		if (((a[0][0] == gamer) && (a[0][1] == gamer) && (a[0][2] == gamer)) || ((a[1][0] == gamer) && (a[1][1] == gamer) && (a[1][2] == gamer)) || ((a[2][0] == gamer) && (a[2][1] == gamer) && (a[2][2] == gamer)) || ((a[0][0] == gamer) && (a[1][0] == gamer) && (a[2][0] == gamer)) || ((a[0][1] == gamer) && (a[1][1] == gamer) && (a[2][1] == gamer)) || ((a[0][2] == gamer) && (a[1][2] == gamer) && (a[2][2] == gamer)) || ((a[0][0] == gamer) && (a[1][1] == gamer) && (a[2][2] == gamer)) || ((a[0][2] == gamer) && (a[1][1] == gamer) && (a[2][0] == gamer)))
 		{
-			std::cout << "Winner is ";
 			return 1;
 		}
 	}
 	bool win()
 	{
-		return win(notactive);
+		return win(passive);
 	}
 	void print()
 	{
@@ -54,14 +56,14 @@ public:
 			{
 				a[i][j] = circle;
 				activegamer = cross;
-				notactive = circle;
+				passive = circle;
 				return 1;
 			}
 			else
 			{
 				a[i][j] = cross;
 				activegamer = circle;
-				notactive = cross;
+				passive = cross;
 				return 1;
 			}
 		}
@@ -81,7 +83,7 @@ public:
 	}
 	string WinnerName()
 	{
-		return activegamer->GetName();
+		return passive->GetName();
 	}
 private:
 	box* a[3][3];
@@ -89,5 +91,5 @@ private:
 	box* cross;
 	box* circle;
 	box* activegamer;
-	box* notactive;
+	box* passive;
 };

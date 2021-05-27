@@ -15,7 +15,7 @@ int main()
 	cin >> name1;
 	cout << "Enter the name of 2 player" << endl;
 	cin >> name2;
-	PlayGround* play = new PlayGround(name1,name2);
+	PlayGround* play = new PlayGround(name1, name2);
 	cout << "The Battle has began" << endl;
 	play->printhint();
 	do
@@ -25,14 +25,18 @@ int main()
 		play->printhint();
 		i = i + play->activePos(pos);
 		play->print();
-		if (play->win())
+		if (play->win() == 1)
 		{
-			std::cout << play->WinnerName();
+			std::cout << "Winner is ";
+			std::cout << play->WinnerName() << std::endl;;
+			std::cout << "Game ended" << std::endl;
+			system("pause");
+			return 1;
 		}
-		else if (i == 9)
+		else if (i >= 9)
 		{
 			pos = 0;
-			cout << "Draw" << endl;
+			cout << "Game ended" << endl;
 		}
 	} while (pos != 0);
 	system("pause");
