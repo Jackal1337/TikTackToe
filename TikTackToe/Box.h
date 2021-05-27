@@ -40,7 +40,7 @@ public:
 	}
 	virtual string GetName()
 	{
-		return box::GetName() + Draw();
+		return box::GetName() + "!";
 	}
 };
 class Circle :
@@ -57,7 +57,7 @@ public:
 	}
 	virtual string GetName()
 	{
-		return box::GetName() + Draw();
+		return box::GetName() + "!";
 	}
 };
 class Empty :
@@ -68,4 +68,6 @@ public:
 	{
 		return '*';
 	}
+
+	int p;
 };
