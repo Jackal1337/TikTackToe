@@ -13,7 +13,7 @@ public:
 		empty = new Empty();
 		cross = new Cross(NameCross);
 		circle = new Circle(NameCircle);
-		activegamer = circle;
+		activegamer = cross;
 		for (int i = 0; i <= 2; i++)
 		{
 			for (int j = 0; j <= 2; j++)
