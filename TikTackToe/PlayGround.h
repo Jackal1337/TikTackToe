@@ -13,7 +13,7 @@ public:
 
 
 
-		//12
+		//123
 		empty = new Empty();
 		cross = new Cross(NameCross);
 		circle = new Circle(NameCircle);
