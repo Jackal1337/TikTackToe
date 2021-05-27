@@ -15,10 +15,7 @@ public:
 
 
 		empty = new Empty();
-		//Empty* e = empty;
 		cross = new Cross(NameCross);
-
-		//Cross* ttt = cros123s;
 		circle = new Circle(NameCircle);
 		activegamer = cross;
 		for (int i = 0; i <= 2; i++)
